@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangoloSx", "TriangoloSx\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangoloDx", "TriangoloDx\TriangoloDx.csproj", "{D5E0261E-5680-494B-BA5C-ADCCFF076CCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{569966C4-12DF-41FC-B08D-AB37604921DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liste", "Liste\Liste.csproj", "{DA16E190-8487-4BF0-BF7C-DFBBBDC73177}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D5E0261E-5680-494B-BA5C-ADCCFF076CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E0261E-5680-494B-BA5C-ADCCFF076CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E0261E-5680-494B-BA5C-ADCCFF076CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569966C4-12DF-41FC-B08D-AB37604921DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569966C4-12DF-41FC-B08D-AB37604921DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569966C4-12DF-41FC-B08D-AB37604921DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569966C4-12DF-41FC-B08D-AB37604921DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA16E190-8487-4BF0-BF7C-DFBBBDC73177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA16E190-8487-4BF0-BF7C-DFBBBDC73177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA16E190-8487-4BF0-BF7C-DFBBBDC73177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA16E190-8487-4BF0-BF7C-DFBBBDC73177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
