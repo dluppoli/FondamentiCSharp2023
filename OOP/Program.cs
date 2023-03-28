@@ -15,39 +15,47 @@ namespace OOP
             //Strutte per contenere i dati
             List<Libro> libreria = new List<Libro>();
 
-            //Inserimento (CREATE)
-            Libro l1 = new LibroCartaceo("La divina commedia","Dante Alighieri",12f);
-            libreria.Add(l1);
-
-            libreria.Add(new LibroCartaceo("I promessi sposi", "Alessandro Manzoni", 8f));
-
-            libreria.Add(new LibroCartaceo
+            while (true)
             {
-                titolo = "La concessione del telefono",
-                autore = "Andrea Camilleri"
-            });
+                Console.Clear();
+                Console.WriteLine("1- Inserimento nuovo libro");
+                Console.WriteLine("2- Stampa elenco libro");
+                Console.WriteLine("3- Stampa numero di libri");
+                Console.WriteLine("4- Ricerca libro");
+                Console.WriteLine("5- Stampa libri in ordine alfabetico di autore");
+                Console.WriteLine("\n9- Esci");
 
-            libreria.Add(new LibroDigitale("Fondamenti di C#", "Bill Gates", 8,120f));
+                string scelta = Console.ReadLine();
 
-            //Lettura di tutti i libri (READ)
-            foreach (Libro libro in libreria)
-            {
-                if( libro.GetType() == typeof(LibroDigitale) )
+                if (scelta == "1")
                 {
-                    //Sono sicuro che libro è di classe LibroDigitale
-                    Console.WriteLine( ((LibroDigitale)libro).kByte );
+                    Console.Write("Inserire il titolo: ");
+                    string titolo = Console.ReadLine();
+
+                    Console.Write("Inserire l'autore: ");
+                    string autore = Console.ReadLine();
+
+                    float prezzoFloat;
+                    string prezzo;
+
+                    do
+                    {
+                        Console.Write("Inserire il prezzo: ");
+                        prezzo = Console.ReadLine();
+
+                    } while (!float.TryParse(prezzo, out prezzoFloat));
+
+                    libreria.Add(new LibroCartaceo(titolo, autore, prezzoFloat));
                 }
 
-                if (libro.GetType() == typeof(LibroCartaceo))
+                if (scelta == "2")
                 {
-                    //Sono sicuro che libro è di classe LibroCartaceo
-                    Console.WriteLine(((LibroCartaceo)libro).pagine);
+                    foreach (Libro l in libreria) Console.WriteLine(l.getInfo());
                 }
 
-                Console.WriteLine(libro.getInfo());
+                if (scelta == "9") break;
             }
-            
-
+            Console.WriteLine("Terminato!");
             Console.ReadLine();
         }
     }
