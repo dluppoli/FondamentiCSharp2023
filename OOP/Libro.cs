@@ -63,5 +63,16 @@ namespace OOP
         {
             this.creazione = DateTime.Now;
         }
+    
+        //Metodi
+        public string getInfo()
+        {
+            return $"{titolo} - {autore} - Prezzo: {prezzo} - creato il {creazione}";
+        }
+
+        public void aumentaPrezzo(float percentuale)
+        {
+            prezzo = prezzo * (1 + percentuale / 100);
+        }
     }
 }

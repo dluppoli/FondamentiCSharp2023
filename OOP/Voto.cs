@@ -42,5 +42,29 @@ namespace OOP
 				if (_punteggio < 30) _lode = false;
 			}
 		}
-	}
+	
+		/*public string VotoStringa
+		{
+			get
+			{
+				if (_lode==true)
+					return $"{_punteggio} con lode";
+				else
+					return $"{_punteggio}";
+			}
+		}*/
+
+		public string VotoStringa(string lingua)
+		{
+			if (_lode == true)
+			{
+				if(lingua.ToUpper() == "ITA")
+                    return $"{_punteggio} con lode";
+                else
+                    return $"{_punteggio} on laude";
+            }
+            else
+				return $"{_punteggio}";
+        }
+    }
 }
