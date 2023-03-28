@@ -53,6 +53,36 @@ namespace OOP
                     foreach (Libro l in libreria) Console.WriteLine(l.getInfo());
                 }
 
+                if(scelta=="3")
+                {
+                    Console.WriteLine($"La tua libreria contiene {libreria.Count} libri");
+                }
+
+                if(scelta == "4")
+                {
+                    //Leggo la ricerca da tastiera
+                    Console.Write("Inserisci il termine da cercare: ");
+                    string ricerca = Console.ReadLine().ToLower();
+                    bool trovato = false;
+
+                    //Scorro tutti i libri
+                    foreach (Libro l in libreria)
+                    {
+                        //Verifico che il titolo o l'autore contengano la ricerca
+                        if( l.titolo.ToLower().Contains(ricerca) || l.autore.ToLower().Contains(ricerca) )
+                        {
+                            //Se la contengono stampo il libro
+                            Console.WriteLine(l.getInfo());
+                            trovato = true;
+                        }
+                    }
+
+                    if(trovato==false)
+                    {
+                        Console.WriteLine("Nessun libro trovato");
+                    }
+                }
+
                 if (scelta == "9") break;
             }
             Console.WriteLine("Terminato!");
