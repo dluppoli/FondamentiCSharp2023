@@ -21,12 +21,15 @@ namespace OOP
             Libro l1 = new Libro {
                 titolo = "La divina commedia",
                 autore = "Dante Alighieri",
-                prezzo = 19.99f
+                //Prezzo = -19.99f
             };
 
-            l1.prezzo *= 1.1f;
+            l1.Prezzo = -10;
 
-            Console.WriteLine($"{l1.titolo} di {l1.autore}, prezzo {Math.Round(l1.prezzo,2)},");
+            //l1.Prezzo *= 1.1f;
+
+            Console.WriteLine($"{l1.titolo} di {l1.autore}, prezzo {Math.Round(l1.Prezzo,2)}, creato il {l1.creazione}");
+
 
 
             Libro l2 = new Libro("I promessi sposi", "Alessandro Manzoni");

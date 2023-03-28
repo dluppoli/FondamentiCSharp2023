@@ -11,8 +11,27 @@ namespace OOP
         //Campi
         public string titolo;
         public string autore;
-        public float prezzo;
-        private DateTime creazione;
+
+        //Obiettivo > 0 (se si tenta di settare un valore <= 0 impostarlo a 9999)
+        private float prezzo;
+        public float Prezzo
+        {
+            get
+            {
+                return prezzo;    
+            }
+            set
+            {
+                if (value <= 0)
+                    prezzo = 9999;
+                else
+                    prezzo = value;
+            }
+        }
+
+        //Obiettivo in sola lettura
+        public DateTime creazione { get; }
+
 
         //Costruttori
         public Libro(string titolo, string autore, float prezzo) : this(titolo,autore)
@@ -23,10 +42,11 @@ namespace OOP
             //this.titolo = titolo.Trim();
             //this.autore = autore;
 
-            if (prezzo <= 0)
+            /*if (prezzo <= 0)
                 this.prezzo = 9999;
             else
-                this.prezzo = prezzo;
+                this.prezzo = prezzo;*/
+            Prezzo = prezzo;
         }
 
         public Libro(string titolo, string autore) : this(titolo)
