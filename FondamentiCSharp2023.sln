@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classi", "Classi\Classi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefType", "RefType\RefType.csproj", "{846383F3-4914-4786-936F-A7E01EF6300C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{3967415E-CD76-49A9-B218-742E8D408FC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{846383F3-4914-4786-936F-A7E01EF6300C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846383F3-4914-4786-936F-A7E01EF6300C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846383F3-4914-4786-936F-A7E01EF6300C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3967415E-CD76-49A9-B218-742E8D408FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3967415E-CD76-49A9-B218-742E8D408FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3967415E-CD76-49A9-B218-742E8D408FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3967415E-CD76-49A9-B218-742E8D408FC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
