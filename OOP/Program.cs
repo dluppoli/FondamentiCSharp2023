@@ -18,7 +18,7 @@ namespace OOP
             l1.creazione = new DateTime(2000, 01, 01);*/
 
 
-            Libro l1 = new Libro {
+            /*Libro l1 = new Libro {
                 titolo = "La divina commedia",
                 autore = "Dante Alighieri",
                 //Prezzo = -19.99f
@@ -33,6 +33,22 @@ namespace OOP
 
 
             Libro l2 = new Libro("I promessi sposi", "Alessandro Manzoni");
+            */
+
+
+
+
+            Voto v1 = new Voto();
+            v1.Punteggio = -9;
+            v1.Lode = true;
+            Console.WriteLine($"Voto: {v1.Punteggio} Lode: {v1.Lode}");
+
+            Voto v2 = new Voto();
+            v2.Lode = true;
+            v2.Punteggio = 18;
+            Console.WriteLine($"Voto: {v2.Punteggio} Lode: {v2.Lode}");
+
+
 
             Console.ReadLine();
         }
