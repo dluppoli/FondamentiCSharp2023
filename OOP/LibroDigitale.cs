@@ -30,5 +30,10 @@ namespace OOP
         public LibroDigitale() : base()
         {
         }
+
+        public override string getInfo()
+        {
+            return base.getInfo() + $" {kByte} Kb";
+        }
     }
 }

@@ -31,5 +31,9 @@ namespace OOP
         {
         }
 
+        public override string getInfo()
+        {
+            return base.getInfo() + $" {pagine} pagine";
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    internal class Libro
+    internal abstract class Libro
     {
         //Campi
         public string titolo;
@@ -65,7 +65,7 @@ namespace OOP
         }
     
         //Metodi
-        public string getInfo()
+        public virtual string getInfo()
         {
             return $"{titolo} - {autore} - Prezzo: {prezzo} - creato il {creazione}";
         }

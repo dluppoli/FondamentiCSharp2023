@@ -13,11 +13,10 @@ namespace OOP
             //CRUD --> Create, Read, Update, Delete
 
             //Strutte per contenere i dati
-            List<LibroCartaceo> libreria = new List<LibroCartaceo>();
-            List<LibroDigitale> kindle = new List<LibroDigitale>();
+            List<Libro> libreria = new List<Libro>();
 
             //Inserimento (CREATE)
-            LibroCartaceo l1 = new LibroCartaceo("La divina commedia","Dante Alighieri",12f);
+            Libro l1 = new LibroCartaceo("La divina commedia","Dante Alighieri",12f);
             libreria.Add(l1);
 
             libreria.Add(new LibroCartaceo("I promessi sposi", "Alessandro Manzoni", 8f));
@@ -28,8 +27,25 @@ namespace OOP
                 autore = "Andrea Camilleri"
             });
 
+            libreria.Add(new LibroDigitale("Fondamenti di C#", "Bill Gates", 8,120f));
+
             //Lettura di tutti i libri (READ)
-            foreach (LibroCartaceo libro in libreria) Console.WriteLine(libro.getInfo());
+            foreach (Libro libro in libreria)
+            {
+                if( libro.GetType() == typeof(LibroDigitale) )
+                {
+                    //Sono sicuro che libro è di classe LibroDigitale
+                    Console.WriteLine( ((LibroDigitale)libro).kByte );
+                }
+
+                if (libro.GetType() == typeof(LibroCartaceo))
+                {
+                    //Sono sicuro che libro è di classe LibroCartaceo
+                    Console.WriteLine(((LibroCartaceo)libro).pagine);
+                }
+
+                Console.WriteLine(libro.getInfo());
+            }
             
 
             Console.ReadLine();
