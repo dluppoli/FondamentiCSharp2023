@@ -13,11 +13,24 @@ namespace OOP
             //CRUD --> Create, Read, Update, Delete
 
             //Strutte per contenere i dati
-            List<Libro> libreria = new List<Libro>();
+            List<IElementoLibreria> libreria = new List<IElementoLibreria>();
+            /*
+            libreria.Add(new LibroCartaceo("La divina commedia","Dante Alighieri",10,500));
+            libreria.Add(new LibroDigitale("I promessi sposi","Manzoni",5,1024));
+
+            Libro l = new LibroCartaceo("La concessione del telefono", "Camilleri", 10, 100);
+            libreria.Add(l);
+
+            foreach (Libro libro in libreria)
+            {
+                libro.getInfo();
+
+                if( libro.GetType() == typeof(LibroCartaceo) )
+            }*/
 
             while (true)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("1- Inserimento nuovo libro");
                 Console.WriteLine("2- Stampa elenco libro");
                 Console.WriteLine("3- Stampa numero di libri");
@@ -50,7 +63,7 @@ namespace OOP
 
                 if (scelta == "2")
                 {
-                    foreach (Libro l in libreria) Console.WriteLine(l.getInfo());
+                    foreach (IElementoLibreria l in libreria) Console.WriteLine(l.getInfo());
                 }
 
                 if(scelta=="3")
@@ -66,10 +79,10 @@ namespace OOP
                     bool trovato = false;
 
                     //Scorro tutti i libri
-                    foreach (Libro l in libreria)
+                    foreach (IElementoLibreria l in libreria)
                     {
                         //Verifico che il titolo o l'autore contengano la ricerca
-                        if( l.titolo.ToLower().Contains(ricerca) || l.autore.ToLower().Contains(ricerca) )
+                        if( l.Contains(ricerca) )
                         {
                             //Se la contengono stampo il libro
                             Console.WriteLine(l.getInfo());

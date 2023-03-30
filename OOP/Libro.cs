@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    internal abstract class Libro
+    internal abstract class Libro : IElementoLibreria
     {
         //Campi
         public string titolo;
         public string autore;
 
         //Obiettivo > 0 (se si tenta di settare un valore <= 0 impostarlo a 9999)
-        private float prezzo;
-        public float Prezzo
+        private float? prezzo = null;
+        public float? Prezzo
         {
             get
             {
@@ -22,8 +22,8 @@ namespace OOP
             }
             set
             {
-                if (value <= 0)
-                    prezzo = 9999;
+                if (value < 0)
+                    prezzo = null;
                 else
                     prezzo = value;
             }
@@ -73,6 +73,19 @@ namespace OOP
         public void aumentaPrezzo(float percentuale)
         {
             prezzo = prezzo * (1 + percentuale / 100);
+        }
+    
+        public bool Contains(string ricerca)
+        {
+            ricerca = ricerca.ToLower();
+
+            return titolo.ToLower().Contains(ricerca) || autore.ToLower().Contains(ricerca);
+            /*
+             * if (titolo.ToLower().Contains(ricerca) || autore.ToLower().Contains(ricerca))
+                return true;
+            else
+                return false;
+            */
         }
     }
 }
